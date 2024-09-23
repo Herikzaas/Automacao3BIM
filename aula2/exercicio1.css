@@ -1,0 +1,13 @@
+h1 {
+    font-size: 18px;
+}
+
+.campos {
+    size: 50%;
+    padding: 5px;
+    appearance: block;
+}
+
+#salvar {
+    background-color: gray;
+}
