@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!--Para criara a estrutura básica coloca-se html:5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercicio1.css">
+</head>
+<body>
+    <h1> Cadastro de Notas</h1>
+    <hr> 
+
+    <form>
+
+        <label>Nome</label>
+        <input type="text" name="nome" class="campos">
+
+        <label>Nota</label>
+        <input type="number" name="nota" class="campos">
+
+        <button id="salvar" type="button">Salvar</button>
+
+    </form>
+
+    <table id="notas"><!--Tabela-->
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Notas</td>
+        </tr>
+    </thead>
+
+        <tr class="linha"> <!--table: linha da tabela-->
+            <td>Vanessa</td> <!--table data: dados da tabela-->
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Kaique</td>
+            <td>10</td>
+        </tr>
+        
+        <tr class="linha">
+            <td>Luis</td>
+            <td>10</td>
+        </tr>
+        
+    </table>
+
+<script>
+    
+    //Seleciona o botão da página 
+    var elementoBtn = document.querySelector("#salvar") 
+
+    //Adiciona um ouvinte de click e quando o botão for clicado faz algo 
+    elementoBtn.addEventListener('click', function(){
+        //Seleciona um campo utilizando oa tributo nome
+        var campoNome = document.querySelector("Input[name='nome']");
+        var campoNota = document.querySelector("Input[name='nota']");
+        //Seleciona a tabela
+        alert(campoNome.value + " Você tirou a nota " + campoNota.value);
+        //seleciona o tbody da tabela. obs: busca dentro da tabela e não entra no documento inteiro
+        var elementTabela = document.querySelector('table')
+
+        celNome.innerText = 'Ivan'
+        var linha = tbody.insertRow();
+        var celNome = linha.insertCell();
+        var celNota = linha.insertCell();
+        celNome.innerText = "Ivan"
+        celNota.innerText = "10"
+    });
+
+
+// # = ID, .nome = classe e seletor de elementos = h1 ... e atributo ("Input[name='nome']");
+</script>
+</body>
+</html>
+
+
