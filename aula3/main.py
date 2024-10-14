@@ -17,8 +17,14 @@ campo_pesquisa.send_keys("aiai")
 #campo_pesquisa.send_keys(Keys.ENTER)
 
 #procura o botao estou com sorte, seu nome é btnI
-btn_estouComSorte = browser.find_element(By.NAME,"btnI")
-btn_estouComSorte.click()
+btn_estouComSorte = browser.find_elements(By.NAME,"btnI")
 
+#enviar um codigo js para ser executado no navegador
+#titulo = browser.execute_script('return document.title;')
+#print("o titulo dessa página é : ",titulo)
+
+#btn_estouComSorte[1].click()
+
+browser.execute_script('arguments[0].style.backgroundColor = "red";', btn_estouComSorte[1])
 
 input("Digite algo para fechar")
